@@ -2,19 +2,46 @@
 //
 
 #include <iostream>
+#include<cmath>
+using std::cin;
+using std::cout;
+using std::endl;
 
-int main()
+double CalcTriangleArea(double side1, double side2, double side3)
 {
-    std::cout << "Hello World!\n";
+    double p = (side1 + side2 + side3) / 2;
+    double area = sqrt(p * (p - side1) * (p - side2) * (p - side3));
+    return area;
 }
 
-// Run program: Ctrl + F5 or Debug > Start Without Debugging menu
-// Debug program: F5 or Debug > Start Debugging menu
+double CalcLineLength(double xStart, double yStart, double xEnd, double yEnd) {
+    double distX = xStart - xEnd;
+    double distY = yStart - yEnd;
+    double distance = sqrt(distX * distX + distY * distY);
+    return distance;
+}
 
-// Tips for Getting Started: 
-//   1. Use the Solution Explorer window to add/manage files
-//   2. Use the Team Explorer window to connect to source control
-//   3. Use the Output window to see build output and other messages
-//   4. Use the Error List window to view errors
-//   5. Go to Project > Add New Item to create new code files, or Project > Add Existing Item to add existing code files to the project
-//   6. In the future, to open this project again, go to File > Open > Project and select the .sln file
+double pentagonArea() {
+    system("chcp 1251");
+    double x1, y1, x2, y2, x3, y3, x4, y4, x5, y5;
+    cout << "\n¬ведите координаты по-пор€дку, начина€ с любой вершины:\n";
+    cin >> x1 >> y1 >> x2 >> y2 >> x3 >> y3 >> x4 >> y4 >> x5 >> y5;
+
+
+
+    double AB = CalcLineLength(x1, y1, x2, y2);
+    double AC = CalcLineLength(x1, y1, x3, y3);
+    double AD = CalcLineLength(x1, y1, x4, y4);
+    double AE = CalcLineLength(x1, y1, x5, y5);
+    double BC = CalcLineLength(x2, y2, x3, y3);
+    double CD = CalcLineLength(x3, y3, x4, y4);
+    double DE = CalcLineLength(x4, y4, x5, y5);
+
+
+    double ABC = CalcTriangleArea(AB, BC, AC);
+    double ACD = CalcTriangleArea(AC, CD, AD);
+    double ADE = CalcTriangleArea(AD, DE, AE);
+
+    double totalArea = ABC + ACD + ADE;
+    return totalArea;
+}
