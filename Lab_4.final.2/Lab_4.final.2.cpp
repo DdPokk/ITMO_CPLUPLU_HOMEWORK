@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-bool Input(int& a, int& b) {
+bool input(int& a, int& b) {
 	int ina, inb;
 	std::cout << "¬ведите два целых положительных числа:" << std::endl;
 	if (!(std::cin >> ina) or !(std::cin >> inb) or (ina <= 0) or (inb <= 0))
@@ -17,7 +17,7 @@ int main()
 {
 	system("chcp 1251");
 	int a1, b1;
-	if (Input(a1, b1) == false) // if(!Input(a,b))
+	if (input(a1, b1) == false) // if(!Input(a,b))
 	{
 		std::cerr << "error";
 		return 1;

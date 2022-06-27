@@ -3,15 +3,15 @@
 
 #include <iostream>
 
-int sumMult5(int n) {
+int sum5(int n) {
 	if (n == 1) return 5;
-	else return(n * 5 + sumMult5(n - 1));
+	else return(n * 5 + sum5(n - 1));
 }
 int main()
 {
 	system("chcp 1251");
-	std::cout << "¬ведите положительное число n.\n";
+	std::cout << "¬ведите число n.\n";
 	int n;
 	std::cin >> n;
-	std::cout << "сумма р€да s = 5 + 10 + 15 + Е + 5Јn равна " << sumMult5(n) << std::endl;
+	std::cout << "сумма р€да s = 5 + 10 + 15 + Е + 5Јn равна " << sum5(n) << std::endl;
 }

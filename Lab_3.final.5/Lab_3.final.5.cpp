@@ -2,18 +2,18 @@
 //
 
 #include <iostream>
-void convert10to2(int num)
+void convert(int num)
 {
 	if (num >= 2) 
-	convert10to2(num / 2);
+	convert(num / 2);
 	std::cout << num % 2;
 }
 int main()
 {
 	system("chcp 1251");
-	std::cout << "¬ведите положительное число.\n";
+	std::cout << "¬ведите число.\n";
 	int num;
 	std::cin >> num;
 	std::cout << "ƒвоична€ запись числа: " << std::ends;
-	convert10to2(num);
+	convert(num);
 }

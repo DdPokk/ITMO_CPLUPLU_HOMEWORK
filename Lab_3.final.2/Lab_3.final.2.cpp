@@ -6,12 +6,11 @@
 using namespace std;
 
 
-double korenPow(double a) {
+double kubkoren(double a) {
     a = pow(a, 1.0 / 3);
     return a;
 }
-
-int korenIter(int a) {
+int koren(int a) {
     int x = a;
     int x2;
 
@@ -28,8 +27,8 @@ int korenIter(int a) {
 int main()
 {
     system("chcp 1251");
-    cout << "\nВведите число" << endl;
+    cout << "\nИсходное число" << endl;
     int a1;
     cin >> a1;
-    cout << "\nКубический корень: " << korenPow(a1)<< endl;
+    cout << "\nКубический корень: " << kubkoren(a1)<< endl;
 }

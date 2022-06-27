@@ -3,7 +3,8 @@
 
 #include <iostream>
 
-int sumElems(int* mas, int n) { //Сумма элементов массива
+int sumElems(int* mas, int n)
+{ 
     int sum = 0;
     for (int i = 0; i < n; i++)
     {
@@ -12,12 +13,14 @@ int sumElems(int* mas, int n) { //Сумма элементов массива
     return sum;
 }
 
-double meanValue(int* mas, int n) { //Среднее значение
+double meanValue(int* mas, int n)
+{
     int s = sumElems(mas, n);
     return  (double)s / n;
 }
 
-int sumNegElems(int* mas, int n) {//a. расчет суммы отрицательных элементов 
+int sumNegElems(int* mas, int n) 
+{
     int sum = 0;
     for (int i = 0; i < n; i++)
     {
@@ -27,7 +30,8 @@ int sumNegElems(int* mas, int n) {//a. расчет суммы отрицательных элементов
     return sum;
 }
 
-int sumPosElems(int* mas, int n) {//b.расчет суммы положительных элементов
+int sumPosElems(int* mas, int n)
+{
     int sum = 0;
     for (int i = 0; i < n; i++) {
         if (mas[i] > 0)
@@ -36,7 +40,8 @@ int sumPosElems(int* mas, int n) {//b.расчет суммы положительных элементов
     return sum;
 }
 
-int sumElemsOddIndex(int* mas, int n) {//c.расчет суммы элементов с нечетными индексами
+int sumElemsOddIndex(int* mas, int n) 
+{
     int sum = 0;
     for (int i = 1; i < n; i += 2) {
         sum += mas[i];
@@ -44,7 +49,8 @@ int sumElemsOddIndex(int* mas, int n) {//c.расчет суммы элементов с нечетными ин
     return sum;
 }
 
-int sumElemsEvenIndex(int* mas, int n) {//d.расчет суммы элементов с четными индексами
+int sumElemsEvenIndex(int* mas, int n) 
+{
     int sum = 0;
     for (int i = 0; i < n; i += 2) {
         sum += mas[i];
@@ -52,7 +58,8 @@ int sumElemsEvenIndex(int* mas, int n) {//d.расчет суммы элементов с четными инд
     return sum;
 }
 
-int indexMinElems(int* mas, int n) {//поиск минимального элемента и его индекса 
+int indexMinElems(int* mas, int n) 
+{
     int min = mas[0], index = 0;
     for (int i = 0; i < n; i++)
     {
@@ -64,7 +71,8 @@ int indexMinElems(int* mas, int n) {//поиск минимального элемента и его индекса
     return index;
 }
 
-int indexMaxElems(int* mas, int n) {//поиск максимального элемента и его индекса 
+int indexMaxElems(int* mas, int n) 
+{
     int max = mas[0], index = 0;
     for (int i = 0; i < n; i++)
     {
@@ -75,7 +83,7 @@ int indexMaxElems(int* mas, int n) {//поиск максимального элемента и его индекса
     }
     return index;
 }
-//произведение элементов массива, расположенных между максимальным и минимальным элементами
+
 void multElems(int* mas, int n) {
     int mult = 1;
     int indexMin = indexMinElems(mas, n);
@@ -124,9 +132,6 @@ void sortArray(int* mas, int n) {
 int main()
 {
     system("chcp 1251");
-
-    //Практика5, задание 1
-    // Операции с элементами массива
     const int n = 10;
     int mas[n];
 
@@ -145,10 +150,4 @@ int main()
     std::cout << "Индекс минимального элемента: " << indexMinElems(mas, n) << std::endl;
     std::cout << "Индекс максимального элемента: " << indexMaxElems(mas, n) << std::endl;
     multElems(mas, n);
-
-    //Сортировка массива (сортировка выбором)
-    const int N = 10;
-    int d[N] = { 1, 25, 6, 32, 43, 5, 96, 23, 4, 55 };
-    std::cout << "Сортировка массива по возрастанию:" << std::endl;
-    sortArray(d, N);
 }

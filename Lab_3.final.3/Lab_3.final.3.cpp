@@ -7,14 +7,14 @@ using std::cout;
 using std::endl;
 using std::string;
 
-double triangleArea(double side1, double side2, double side3)
+double area1(double side1, double side2, double side3)
 {
     double p = (side1 + side2 + side3) / 2;
     double area = sqrt(p * (p - side1) * (p - side2) * (p - side3));
     return area;
 }
 
-double triangleArea(double side)
+double area2(double side)
 {
     double area = (side * side * sqrt(3)) / 4;;
     return area;
@@ -22,22 +22,22 @@ double triangleArea(double side)
 void triangleTypeSelection() {
     system("chcp 1251");
     string selection;
-    cout << "Является ли треугольник равносторонним (да/нет)?\n";
+    cout << "Треугольник равносторонний? (y/n)?\n";
     cin >> selection;
 
-    if (selection == "да")
+    if (selection == "y")
     {
         double side;
-        cout << "Введите длину стороны треугольника\n";
+        cout << "Введите длину сторон треугольника\n";
         cin >> side;
-        cout << "Площадь треугольника равна " << triangleArea(side) << endl;
+        cout << "Площадь треугольника равна " << area2(side) << endl;
     }
-    else if (selection == "нет")
+    else if (selection == "n")
     {
         double side1, side2, side3;
         cout << "Введите длины трёх сторон треугольника через пробел\n";
         cin >> side1 >> side2 >> side3;
-        cout << "Площадь треугольника равна " << triangleArea(side1, side2, side3) << endl;
+        cout << "Площадь треугольника равна " <<area1(side1, side2, side3) << endl;
     }
     else
         cout << "Некорректный ввод.\n";
