@@ -1,0 +1,42 @@
+<- Teacher ->
+FIO: Ivanov Ivan Ivanovich
+Phone: 123
+Age: 33
+Subject: maths
+Salary: 1500
+
+<- Teacher ->
+FIO: Leonov Sergey Nikolaevich
+Phone: 153
+Age: 45
+Subject: informatics
+Salary: 1800
+
+<- Teacher ->
+FIO: Markova Anna Vladimirovna
+Phone: 153
+Age: 39
+Subject: english
+Salary: 2300
+
+<- Student ->
+FIO: Barkova Inna Olegovna
+Phone: 512
+Age: 22
+Group: MK101
+Rating: 0, 0, 0
+
+<- Student ->
+FIO: Smirnov Oleg Sergeevich
+Phone: 341
+Age: 24
+Group: MK102
+Rating: 0, 0, 0
+
+<- Student ->
+FIO: Karpov Nikolay Alexeevich
+Phone: 446
+Age: 26
+Group: MK104
+Rating: 0, 0, 0
+
