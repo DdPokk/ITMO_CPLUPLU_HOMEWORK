@@ -129,6 +129,11 @@
   <ItemGroup>
     <ClCompile Include="Lab_13.final.1.cpp" />
   </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="human.h" />
+    <ClInclude Include="student.h" />
+    <ClInclude Include="teacher.h" />
+  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
