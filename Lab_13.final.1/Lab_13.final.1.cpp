@@ -10,15 +10,13 @@
 int main()
 {
 	std::vector<int> scores;
+	scores.push_back(4);
+	scores.push_back(5);
 	scores.push_back(5);
 	scores.push_back(3);
 	scores.push_back(4);
 	scores.push_back(4);
-	scores.push_back(5);
-	scores.push_back(3);
-	scores.push_back(3);
-	scores.push_back(3);
-	scores.push_back(3);
+	scores.push_back(4);
 	student* stud = new student("Петров", "Петр", "Петрович", scores);
 	std::cout << stud->get_full_name() << std::endl;
 student: std::cout << "Средний балл : " << stud->get_average_score() << std::endl;
