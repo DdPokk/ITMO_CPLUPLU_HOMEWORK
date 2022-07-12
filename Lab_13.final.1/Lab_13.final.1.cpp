@@ -7,14 +7,8 @@
 #include "student.h"
 #include "teacher.h"
 
-void ShowInfo(const human* hum) 
-{
-	std::cout << hum->get_info() << "\n----------------- " << std::endl;
-}
 int main()
 {
-	SetConsoleOutputCP(1251);
-	SetConsoleCP(1251);
 	std::vector<int> scores;
 	scores.push_back(5);
 	scores.push_back(3);
@@ -25,17 +19,12 @@ int main()
 	scores.push_back(3);
 	scores.push_back(3);
 	scores.push_back(3);
-	human* hum1 = new human("Иванов", "Иван", "Иванович");
-	std::cout << hum1->get_info() << "\n----------------- " << std::endl;
 	student* stud = new student("Петров", "Петр", "Петрович", scores);
-	hum1 = stud;
-	std::cout << hum1->get_info() << "\n----------------- " << std::endl;
+	std::cout << stud->get_full_name() << std::endl;
+student: std::cout << "Средний балл : " << stud->get_average_score() << std::endl;
 	unsigned int teacher_work_time = 40;
 	teacher* tch = new teacher("Сергеев", "Сергей", "Сергеевич", teacher_work_time);
-	hum1 = tch;
-	std::cout << hum1->get_info() << "\n----------------- " << std::endl;
-	delete hum1;
-	delete stud;
-	delete tch;
+	std::cout << tch->get_full_name() << std::endl;
+	std::cout << "Количество часов: " << tch->get_work_time() << std::endl;
 	return 0;
 }
